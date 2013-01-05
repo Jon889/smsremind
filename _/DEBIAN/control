@@ -1,0 +1,10 @@
+Package: com.jbp.smsremind
+Name: SMSRemind
+Depends: mobilesubstrate
+Version: 0.0.1-1
+Architecture: iphoneos-arm
+Description: An awesome MobileSubstrate tweak!
+Maintainer: Jonathan Bailey
+Author: Jonathan Bailey
+Section: Tweaks
+Installed-Size: 20
