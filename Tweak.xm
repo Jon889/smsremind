@@ -83,6 +83,7 @@
     }
     
 }
+
 %new
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
     if ([actionSheet cancelButtonIndex] == buttonIndex) {
@@ -109,7 +110,6 @@
 %hook RemindersCheckboxCell
 -(void)tap:(UIGestureRecognizer *)gestureRecognizer {
     NSURL *ivar(self, actionURL); UIView *ivar(self, linkHighlightView);
-    BOOL sc = MSHookIvar<BOOL>(self, "_showingClear");
     if ([[actionURL scheme] isEqualToString:@"sms"]) {
         if ([gestureRecognizer state] == 3) {//ended
             [[UIApplication sharedApplication] openURL:actionURL];
